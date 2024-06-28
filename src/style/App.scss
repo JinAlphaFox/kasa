@@ -1,0 +1,28 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  @include row;
+  width: 1240px;
+  height: 68px;
+  margin: auto;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  .navMenu {
+    @include row;
+    width: 309px;
+  }
+}
+
+main {
+  width: 1240px;
+  margin: auto;
+}
