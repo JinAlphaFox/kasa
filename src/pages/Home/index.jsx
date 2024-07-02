@@ -47,7 +47,11 @@ function Home() {
         {bdd.map((element) => {
           return (
             <Logement key={element.id}>
-              <Card element={element} />
+              <Card
+                id={element.id}
+                cover={element.cover}
+                title={element.title}
+              />
             </Logement>
           )
         })}

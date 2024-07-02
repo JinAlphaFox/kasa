@@ -1,0 +1,42 @@
+.dropdown {
+    width: 1023px;
+    margin: auto;
+    &__titre {
+        background-color: #FF6060;
+        padding: 0px 20px 0px 15px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: white;
+        h2 {
+            font-size: 24px;
+        }
+        &__collapse {
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .fa-solid {
+                transform: rotate(0deg);
+                transition: transform 0.5s linear;
+                &.open {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+    &__contenu {
+        background-color: #F6F6F673;
+        padding: 0 15px;
+        border-radius: 10px 10px 5px 5px;
+        margin: 0;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s linear, padding 0.5s linear;
+        &.open {
+            max-height: 200px;
+        }
+    }
+}

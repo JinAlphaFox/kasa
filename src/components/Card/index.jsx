@@ -12,14 +12,11 @@ const TitleLogement = styled.h3`
   left: 20px;
 `
 
-function Card(logement) {
+function Card({ id, cover, title }) {
   return (
-    <Link to={`/accommodation/${logement.element.id}`}>
-      <CoverLogement
-        src={logement.element.cover}
-        alt={logement.element.title}
-      />
-      <TitleLogement>{logement.element.title}</TitleLogement>
+    <Link to={`/accommodation/${id}`}>
+      <CoverLogement src={cover} alt={title} />
+      <TitleLogement>{title}</TitleLogement>
     </Link>
   )
 }
