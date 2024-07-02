@@ -1,0 +1,25 @@
+$primary: #FF6060;
+
+.error{
+    display: flex;
+    flex-direction: column;
+    gap: 139px;
+    h1 {
+        color: $primary;
+        text-align: center;
+        font-size: 288px;
+        margin: 0;
+    }
+    h2 {
+        color: $primary;
+        text-align: center;
+        font-size: 36px;
+    }
+    p{
+        text-align: center;
+        font-size: 18px;
+    }
+    &__link {
+        color: black;
+    }
+}
