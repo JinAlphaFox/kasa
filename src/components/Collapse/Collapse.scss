@@ -1,6 +1,4 @@
 .dropdown {
-    width: 1023px;
-    margin: auto;
     &__titre {
         background-color: #FF6060;
         padding: 0px 20px 0px 15px;
@@ -29,14 +27,22 @@
     }
     &__contenu {
         background-color: #F6F6F673;
-        padding: 0 15px;
+        padding: 0 20px;
         border-radius: 10px 10px 5px 5px;
         margin: 0;
         overflow: hidden;
         max-height: 0;
         transition: max-height 0.5s linear, padding 0.5s linear;
         &.open {
-            max-height: 200px;
+            max-height: 500px;
+            padding: 20px;
+        }
+        ul {
+            padding: 0;
+            li {
+                list-style-type: none;
+                padding: 2px;
+            }
         }
     }
 }

@@ -34,7 +34,7 @@ function About() {
       <section className="about__img"></section>
       {aboutList.map((element) => {
         return (
-          <section key={element.id}>
+          <section className="about__collapse" key={element.id}>
             <Collapse title={element.title} content={element.content} />
           </section>
         )

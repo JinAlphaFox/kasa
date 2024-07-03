@@ -17,11 +17,18 @@ function Collapse({ title, content }) {
         </span>
       </div>
       <div className={`dropdown__contenu ${onOff ? "open" : ""}`}>
-        {content}
+        {Array.isArray(content) ? (
+          <ul>
+            {content.map((e) => {
+              return <li key={e}>{e}</li>
+            })}
+          </ul>
+        ) : (
+          content
+        )}
       </div>
     </div>
   )
 }
 
 export default Collapse
-//<i className={`fa-solid fa-chevron-${onOff ? "down" : "up"}`}></i>
