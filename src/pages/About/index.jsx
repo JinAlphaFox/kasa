@@ -28,7 +28,9 @@ const aboutList = [
   },
 ]
 
-function About() {
+function About({ majAccueil, majAbout }) {
+  majAccueil(false)
+  majAbout(true)
   return (
     <main className="about">
       <section className="about__img"></section>

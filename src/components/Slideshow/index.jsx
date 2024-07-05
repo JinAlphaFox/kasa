@@ -7,12 +7,12 @@ function Slideshow({ id }) {
   const [actualPictures, majActual] = useState(0)
   const [nbPictures, majNb] = useState(0)
   useEffect(() => {
-    const carrousel = document.getElementsByClassName("carrousel")
     for (let i = 0; i < bdd.length; i++) {
       if (bdd[i].id === id) {
         logement = bdd[i]
       }
     }
+    const carrousel = document.getElementsByClassName("carrousel")
     carrousel[0].style.backgroundImage = `url(${logement.pictures[actualPictures]})`
     majNb(logement.pictures.length)
   }, [actualPictures])

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 const CoverLogement = styled.img`
   width: 340px;
   height: 340px;
+  border-radius: 10px;
 `
 const TitleLogement = styled.h3`
   color: white;
@@ -11,13 +12,17 @@ const TitleLogement = styled.h3`
   top: -90px;
   left: 20px;
 `
+const StyledLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+`
 
 function Card({ id, cover, title }) {
   return (
-    <Link to={`/accommodation/${id}`}>
+    <StyledLink to={`/accommodation/${id}`}>
       <CoverLogement src={cover} alt={title} />
       <TitleLogement>{title}</TitleLogement>
-    </Link>
+    </StyledLink>
   )
 }
 

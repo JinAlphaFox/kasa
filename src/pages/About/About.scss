@@ -1,7 +1,12 @@
 .about {
   display: flex;
   flex-direction: column;
+  width: 1240px;
+  margin: auto;
   gap: 30px;
+  @media (max-width: 1275px) {
+    width: 335px;
+  }
   &__img {
     width: 1240px;
     height: 223px;
@@ -10,10 +15,17 @@
       url("../../assets/Image2.jpg");
     background-size: cover;
     background-position: center;
+    @media (max-width: 1275px) {
+      width: 335px;
+      height: 111px;
+    }
   }
   &__collapse {
     width: 1023px;
     margin: auto;
+    @media (max-width: 1275px) {
+      width: 335px;
+    }
   }
 }
 

@@ -3,23 +3,36 @@ $primary: #FF6060;
 .error{
     display: flex;
     flex-direction: column;
+    margin: auto;
     gap: 139px;
+    @media (max-width: 1275px) {
+      width: 335px;
+    }
     h1 {
         color: $primary;
         text-align: center;
         font-size: 288px;
         margin: 0;
+        @media (max-width: 1275px) {
+          font-size: 96px;
+        }
     }
     h2 {
         color: $primary;
         text-align: center;
         font-size: 36px;
+        @media (max-width: 1275px) {
+          font-size: 18px;
+        }
     }
     p{
         text-align: center;
-        font-size: 18px;
     }
     &__link {
+        font-size: 18px;
+        @media (max-width: 1275px) {
+          font-size: 14px;
+        }
         color: black;
     }
 }

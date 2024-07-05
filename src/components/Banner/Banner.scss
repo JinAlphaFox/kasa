@@ -1,0 +1,41 @@
+@mixin row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-black {
+    color: black;
+    text-decoration: none;
+}
+.-active {
+    color: black;
+    text-decoration: underline;
+}
+header {
+    @include row;
+    width: 1240px;
+    height: 68px;
+    margin: auto;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    @media (max-width: 1275px) {
+        width: 335px;
+    }
+    .navMenu {
+        @include row;
+        width: 270px;
+        font-size: 24px;
+        @media (max-width: 1275px) {
+            font-size: 12px;
+            width: 135px;
+            padding-right: 10px;
+        }
+    }
+    img {
+        @media (max-width: 1275px) {
+            width: 145px;
+        }
+    }
+}

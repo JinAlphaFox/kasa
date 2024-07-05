@@ -9,6 +9,9 @@
         color: white;
         h2 {
             font-size: 24px;
+            @media (max-width: 1275px) {
+                font-size: 15px;
+            }
         }
         &__collapse {
             background-color: rgba(0, 0, 0, 0);
@@ -16,6 +19,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @media (max-width: 1275px) {
+                font-size: 15px;
+            }
             .fa-solid {
                 transform: rotate(0deg);
                 transition: transform 0.5s linear;
@@ -33,6 +39,10 @@
         overflow: hidden;
         max-height: 0;
         transition: max-height 0.5s linear, padding 0.5s linear;
+        font-size: 18px;
+        @media (max-width: 1275px) {
+            font-size: 12px;
+        }
         &.open {
             max-height: 500px;
             padding: 20px;
