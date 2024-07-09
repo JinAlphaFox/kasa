@@ -16,4 +16,13 @@ footer {
             margin-bottom: 0px;
         }
     }
+    p {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        @media (max-width: 1275px) {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
 }

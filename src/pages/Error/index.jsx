@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom"
 import "./Error.scss"
 
-function Error({ majAccueil, majAbout }) {
-  majAccueil(false)
-  majAbout(false)
+function Error() {
   return (
     <main className="error">
       <h1>404</h1>

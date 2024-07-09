@@ -4,9 +4,7 @@ import Slideshow from "../../components/Slideshow"
 import bdd from "../../logements.json"
 import Collapse from "../../components/Collapse"
 
-function Accommodation({ majAccueil, majAbout }) {
-  majAccueil(false)
-  majAbout(false)
+function Accommodation() {
   const { id } = useParams()
 
   let logement = false

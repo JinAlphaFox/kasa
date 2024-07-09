@@ -32,6 +32,9 @@
         font-size: 18px;
         color: white;
         padding: 20px;
+        @media (max-width: 1275px) {
+            display: none;
+        }
     }
     .--hidden {
         display: none;

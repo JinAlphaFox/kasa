@@ -5,14 +5,6 @@
     align-items: center;
 }
 
-.link-black {
-    color: black;
-    text-decoration: none;
-}
-.-active {
-    color: black;
-    text-decoration: underline;
-}
 header {
     @include row;
     width: 1240px;
@@ -22,6 +14,8 @@ header {
     padding-bottom: 45px;
     @media (max-width: 1275px) {
         width: 335px;
+        padding-top: 5px;
+        padding-bottom: 15px;
     }
     .navMenu {
         @include row;
@@ -31,6 +25,15 @@ header {
             font-size: 12px;
             width: 135px;
             padding-right: 10px;
+            text-transform: uppercase;
+        }
+        &__link-black {
+            color: black;
+            text-decoration: none;
+            &--active {
+                color: black;
+                text-decoration: underline;
+            }
         }
     }
     img {

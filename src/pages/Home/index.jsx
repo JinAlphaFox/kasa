@@ -37,6 +37,8 @@ const Title = styled.h2`
   color: white;
   height: 223px;
   display: flex;
+  flex-direction: row;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -47,7 +49,9 @@ const Title = styled.h2`
   @media (max-width: 1275px) {
     height: 111px;
     font-size: 24px;
-    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0px;
+    align-items: baseline;
     padding-left: 24px;
     box-sizing: border-box;
     margin: 0;
@@ -55,18 +59,21 @@ const Title = styled.h2`
   }
 `
 const Logement = styled.article`
-  width: 340px;
   height: 340px;
+  @media (min-width: 1275px) {
+    width: 340px;
+  }
+  @media (max-width: 1275px) {
+    height: 250px;
+  }
 `
 
-function Home({ majAccueil, majAbout }) {
-  majAccueil(true)
-  majAbout(false)
-
+function Home() {
   return (
     <Main>
       <Title>
-        Chez vous,{window.innerWidth <= 1275 ? <br /> : " "}partout et ailleurs
+        <span>Chez vous,</span>
+        <span> partout et ailleurs</span>
       </Title>
       <Gallery>
         {bdd.map((element) => {

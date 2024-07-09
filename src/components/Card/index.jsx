@@ -5,6 +5,10 @@ const CoverLogement = styled.img`
   width: 340px;
   height: 340px;
   border-radius: 10px;
+  @media (max-width: 1275px) {
+    width: 335px;
+    height: 255px;
+  }
 `
 const TitleLogement = styled.h3`
   color: white;
